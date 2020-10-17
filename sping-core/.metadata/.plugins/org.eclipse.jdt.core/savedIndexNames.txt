@@ -104,7 +104,6 @@ INDEX VERSION 1.131+C:\Users\kjravisx\OneDrive - Intel Corporation\Desktop\dev-s
 657660491.index
 1439118956.index
 2478819459.index
-800898172.index
 739681777.index
 1916054279.index
 725278728.index
