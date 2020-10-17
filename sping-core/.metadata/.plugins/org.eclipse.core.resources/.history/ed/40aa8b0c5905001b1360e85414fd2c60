@@ -1,0 +1,11 @@
+package com.springcore;
+
+public class HappyFortuneService implements FortuneService {
+
+	@Override
+	public String HappyFortuneService() {
+		// TODO Auto-generated method stub
+		return "Today is your lucky day";
+	}
+
+}

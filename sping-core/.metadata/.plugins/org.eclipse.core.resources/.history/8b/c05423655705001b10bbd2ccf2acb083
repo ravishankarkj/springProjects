@@ -1,0 +1,10 @@
+package com.springcore;
+
+public class HappyFortuneService implements FortuneService {
+
+	@Override
+	public String HappyFortuneService() {
+		return "Today is your lucky day";
+	}
+
+}

@@ -1,0 +1,18 @@
+package com.springcore.annotations;
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class CoachApp {
+
+	public static void main(String[] args) {
+
+		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+		
+		Coach tennisCoach = context.getBean("tennisCoach", Coach.class);
+		
+		System.out.println(tennisCoach.getDailyWorkouts());
+		
+		context.close();
+	}
+
+}

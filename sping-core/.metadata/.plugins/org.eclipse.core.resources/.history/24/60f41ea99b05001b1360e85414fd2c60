@@ -1,0 +1,7 @@
+package com.springcore.annotaions;
+
+public interface Coach {
+	
+	public String getDailyWorkouts();
+
+}

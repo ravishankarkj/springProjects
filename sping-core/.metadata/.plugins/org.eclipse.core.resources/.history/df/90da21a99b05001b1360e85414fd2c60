@@ -1,0 +1,10 @@
+package com.springcore.annotaions;
+
+public class TennisCoach implements Coach {
+
+	@Override
+	public String getDailyWorkouts() {
+		return "Practice backhand volly";
+	}
+
+}
