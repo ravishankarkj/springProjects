@@ -49,6 +49,7 @@ public class EmployeeDaoHibernateImpl implements EmployeeDao {
 
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public void deleteById(int theId) {
 		

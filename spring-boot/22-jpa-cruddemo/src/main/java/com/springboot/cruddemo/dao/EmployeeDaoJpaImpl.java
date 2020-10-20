@@ -20,6 +20,7 @@ public class EmployeeDaoJpaImpl implements EmployeeDao {
 		this.entityManager = entityManager;
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public List<Employee> getAll() {
 		Query theQuery = entityManager.createQuery("from Employee", Employee.class);
