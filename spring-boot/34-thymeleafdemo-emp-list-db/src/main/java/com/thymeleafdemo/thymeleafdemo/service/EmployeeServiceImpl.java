@@ -21,13 +21,11 @@ public class EmployeeServiceImpl implements EmployeeService {
 
 	@Override
 	public List<Employee> findAll() {
-		// TODO Auto-generated method stub
 		return empRepo.findAllByOrderByLastNameAsc();
 	}
 
 	@Override
 	public Employee findById(int theId) {
-		// TODO Auto-generated method stub
 		Optional<Employee> result =  empRepo.findById(theId);
 		
 		Employee theEmployee = null;
@@ -40,7 +38,6 @@ public class EmployeeServiceImpl implements EmployeeService {
 
 	@Override
 	public void addEmployee(Employee theEmployee) {
-		// TODO Auto-generated method stub
 		
 		empRepo.save(theEmployee);
 
@@ -48,9 +45,21 @@ public class EmployeeServiceImpl implements EmployeeService {
 
 	@Override
 	public void deleteEmployee(int theId) {
-		// TODO Auto-generated method stub
 		
 		empRepo.deleteById(theId);
+	}
+
+	@Override
+	public List<Employee> searchByName(String theName) {
+		
+		List<Employee> result = null;
+		
+		if (theName!=null && (theName.trim().length()>0))
+			result = empRepo.findByFirstNameContainsOrLastNameContainsAllIgnoreCase(theName, theName);
+		else
+			result = findAll();
+		
+		return result;
 	}
 
 }

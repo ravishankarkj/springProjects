@@ -11,4 +11,7 @@ import com.thymeleafdemo.thymeleafdemo.entity.Employee;
 public interface EmployeeRepository extends JpaRepository<Employee, Integer> {
 	
 	public List<Employee> findAllByOrderByLastNameAsc();
+	
+	public List<Employee> findByFirstNameContainsOrLastNameContainsAllIgnoreCase(String name, String lName);
+
 }
